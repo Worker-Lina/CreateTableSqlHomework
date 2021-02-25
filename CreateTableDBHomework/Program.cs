@@ -6,8 +6,10 @@ namespace CreateTableDBHomework
     {
         static void Main(string[] args)
         {
-            var gruppaDataAccess = new GruppaDataAccess();
-            gruppaDataAccess.CreateTable();
+            using (var gruppaDataAccess = new GruppaDataAccess())
+            {
+                gruppaDataAccess.CreateTable();
+            }
         }
     }
 }
